@@ -13,6 +13,9 @@ const map: any = {
 
 /** User packages configuration. */
 const packages: any = {
+  '@angular2-material/core' : { main: 'core.js' },
+  '@angular2-material/button' : { main: 'button.js' },
+  '@angular2-material/card' : { main: 'card.js' },
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -36,6 +39,12 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/bid-card',
+  'app/like',
+  'app/post',
+  'app/comment',
+  'app/user',
+  'app/layouts/header',
   /** @cli-barrel */
 ];
 
@@ -52,7 +61,8 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
-    'main': 'main.js'
+    'main': 'main.js',
+    '@angular2-material': 'vendor/@angular2-material'
   },
   packages: cliSystemConfigPackages
 });
